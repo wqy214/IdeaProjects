@@ -21,7 +21,8 @@
 	g.drawRect(0, 0, width - 1, height - 1);
 	// create a random instance to generate the codes
 	Random rdm = new Random();
-	String hash1 = Integer.toHexString(rdm.nextInt());
+	String hash1 = Integer.toString(rdm.nextInt());
+//	String hash1 = Integer.toHexString(rdm.nextInt());
 	// make some confusion
 	for (int i = 0; i < 50; i++) {
 		int x = rdm.nextInt(width);
@@ -29,7 +30,7 @@
 		g.drawOval(x, y, 0, 0);
 	}
 	// generate a random code
-	String capstr = hash1.substring(0, 4);
+	String capstr = hash1.substring(1, 5);
 	session.setAttribute("key", capstr);
 	g.setColor(new Color(0, 100, 0));
 	g.setFont(new Font("Candara", Font.BOLD, 24));
