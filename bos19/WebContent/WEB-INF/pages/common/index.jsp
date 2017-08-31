@@ -51,8 +51,9 @@
 			dataType : 'json',
 			success : function(data) {
 				//var zNodes = eval("(" + data + ")");
-				$.fn.zTree.init($("#treeMenu"), setting, data);
-			},
+				$.fn.zTree.init($("#treeMenu"), setting, data).expandAll(true);
+
+            },
 			error : function(msg) {
 				alert('菜单加载异常!');
 			}
