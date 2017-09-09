@@ -24,7 +24,7 @@ public class FunctionDaoImpl extends BaseDaoImpl<Function> implements
 	 * 查询所有的菜单
 	 */
 	public List<Function> findAllMenu() {
-		String hql = "FROM Function f WHERE f.generatemenu = '1' ORDER BY f.zindex DESC";
+		String hql = "FROM Function f WHERE f.generatemenu = '1' ORDER BY f.zindex ASC";
 		return this.getHibernateTemplate().find(hql);
 	}
 
